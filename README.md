@@ -1,45 +1,45 @@
-# ELECTIONS SCRAPER - třetí python projekt Engeto akademie
+# ELECTIONS SCRAPER - the third project of the python Engeto Academy
 
 
 
-## POPIS APLIKACE
-Projekt election srapcer slouží ke stahování vymezené části a následného třídění dat ze stránek statistiského úřadu a to na portále www.volby.cz.
+## APPLICATION DESCTIPTION
+The election srapcer project is used to download a defined part and then sort data from the website of the statistical office on the portal www.volby.cz.
 
-## INSTALACE KNIHOVEN
-Použité knihovny, které jsou součástí projektu se nacházejí v souboru requirements.txt.
-K tomu aby jste mohli nainstalovat použité knihovny, vytvořte virtuální prostředí a nainstalujte potřebné balíčky:
+## INSTALLATION OF LIBRARIES
+The used libraries that are part of the project are located in the requirements.txt file.
+To be able to install the used libraries, create a virtual environment and install the necessary packages:
 
 
 ```
-$ pip3 --version # ověření verze manažera
+$ pip3 --version # manager version verification
 
-$ pip3 install -r requirements.txt # instalace knihoven
+$ pip3 install -r requirements.txt # installing libraries
 ```
 
 
-## SPUŠTĚNÍ PROGRAMU
-Ke spuštění souboru election.py, potřebujete 2 povinné argumenty.
+## STARTING THE PROGRAM
+To run the election.py file, you need 2 mandatory arguments.
 
-python election.py <"url odkazující na požadované území"> <"název_souboru.csv">
+python election.py <"url referring to the desired territory"> <"filename.csv">
 
-## UKÁZKA PROGRAMU
-Výsledky hlasování pro okres Benešov:
+## SAMPLE PROGRAM
+Voting results for the Benešov district:
 
 1. Argument(URL): '''https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101'''
 
-2. Argument(Název souboru): "vysledky_benesov.csv"
+2. Argument(filename): "result.csv"
 
-### SPUŠTĚNÍ PROGRAMU
-python election.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "vysledky_benesov.csv"
+### STARTING THE PROGRAM
+python election.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "result.csv"
 
-### STAHOVÁNÍ
+### DOWNLOADING
 Downloading data from: "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101"
 
-Saving data to: vysledky_benesov.csv
+Saving data to: result.csv
 
 Data was saved. Exiting program!
 
-### OČEKÁVANÝ VÝSTUP
+### EXPECTED OUTPUT
 
 ```
 Code,Location,Registered,Envelopers,Valid,...
@@ -47,7 +47,7 @@ Code,Location,Registered,Envelopers,Valid,...
 532568,Bernartice,191,148,148,...
 ```
 
-### MOŽNÉ CHYBY
+### POSSIBLE ERRORS
 "Program need 2 arguments. URL, CSV file. Exiting program!"
 
 "First argument not correct. Exiting program! "
