@@ -90,7 +90,7 @@ def arguments():
 def main():
     """Main function to run"""
     arguments()
-    csv_file = "vysledky_benesov.csv"
+    csv_file = "result.csv"
     url = "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101"
     url_sub = f"https://www.volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec="
     soup=response_server(url)
