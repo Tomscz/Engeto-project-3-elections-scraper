@@ -2,7 +2,7 @@
 
 
 
-## APPLICATION DESCTIPTION
+## APPLICATION DESCRIPTION
 The election srapcer project is used to download a defined part and then sort data from the website of the statistical office on the portal www.volby.cz.
 
 ## INSTALLATION OF LIBRARIES
