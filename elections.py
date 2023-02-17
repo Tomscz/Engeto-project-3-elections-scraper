@@ -13,6 +13,7 @@ import pandas as pd
 
 
 def response_server(url):
+    """Tato funkce získává a parsuje data z požadovaného url"""
     response = requests.get(url)
     soup = bs(response.content, "html.parser")
     return soup
