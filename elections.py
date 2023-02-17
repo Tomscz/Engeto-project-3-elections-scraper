@@ -1,5 +1,5 @@
 """
-třetí projekt do Engeto Python Akademie
+Project no.3 Engeto Python Academy
 author: Tomáš Šmíd
 email: tomas.smid@gmail.com
 discord: Tomáš Š#9081
@@ -13,28 +13,28 @@ import pandas as pd
 
 
 def response_server(url):
-    """Tato funkce získává a parsuje data z požadované url"""
+    """This function gets and parses the data from the requested url"""
     response = requests.get(url)
     soup = bs(response.content, "html.parser")
     return soup
 
 
 def locations_all(soup):
-    """Tato funkce získává názvy jednotlivých obcí"""
+    """This function retrieves the names of individual municipalities"""
     locations_all = soup.find_all("td", {"class": "overflow_name"})
     locations = [location.text for location in locations_all]
     return locations
 
 
 def codes_cities(soup):
-    """Tato funkce získává kódy jednotlivých obcí"""
+    """This function retrieves the codes of individual municipalities"""
     codes_cities = soup.find_all("td", {"class": "cislo"})
     codes = [code.text for code in codes_cities]
     return codes
 
 
 def parties_all(url_sub, codes):
-    """Tato funkce získává názvy jednotlivých politických stran"""
+    """This function retrieves the names of individual political parties"""
     for code in codes:
         url = f"{url_sub}{code}"
         soup = response_server(url)
@@ -44,7 +44,7 @@ def parties_all(url_sub, codes):
 
 
 def data_collector(url_sub, codes, locations, parties):
-    """Tato funkce sbírá, třídí a kompletuje veškerá data"""
+    """This function collects, sorts and completes all the data"""
     registered = []
     envelopers = []
     valid = []
@@ -65,7 +65,7 @@ def data_collector(url_sub, codes, locations, parties):
 
 
 def csv_maker(data_all, csv_file):
-    """Tato funkce převádí data z data_collectoru do CSV"""
+    """This function converts and stores data from data_collector to CSV"""
     df = pd.DataFrame.from_dict(data_all)
     print ("Printing file into CSV File! ")
     df.to_csv(csv_file, index=False)
@@ -73,7 +73,7 @@ def csv_maker(data_all, csv_file):
 
 
 def arguments():
-    """Tato funkce kontroluje platné argumenty, aby mohl být program spuštěn."""
+    """This function checks for valid arguments so that the program can run"""
     if len(sys.argv) != 3:
         print(f"Program need 2 arguments to run: URL and CSV file name. Exiting program! ")
         sys.exit()
@@ -88,7 +88,7 @@ def arguments():
 
 
 def main():
-    """Hlavní funkce pro spuštění."""
+    """Main function to run"""
     arguments()
     csv_file = "vysledky_benesov.csv"
     url = "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101"
