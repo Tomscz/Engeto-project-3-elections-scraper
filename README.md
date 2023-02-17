@@ -1,9 +1,10 @@
-# ELECTIONS SCRAPER - the third project of the python Engeto Academy
+# ELECTIONS SCRAPER
+## the third project of the python Engeto Academy
 
 
 
 ## APPLICATION DESCRIPTION
-The election srapcer project is used to download a defined part and then sort data from the website of the statistical office on the portal www.volby.cz.
+The election sraper project is used to download a defined part and then sort data from the website of the statistical office on the portal www.volby.cz.
 
 ## INSTALLATION OF LIBRARIES
 The used libraries that are part of the project are located in the requirements.txt file.
