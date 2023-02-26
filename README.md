@@ -4,7 +4,7 @@
 
 
 ## APPLICATION DESCRIPTION
-The election sraper project is used to download a defined part and then sort data from the website of the statistical office on the portal www.volby.cz.
+The election sraper project is used to download a defined part and then sort data from the website of the statistical office on the portal www.volby.cz. You can choose any district for scraping and than name the resulting file according to your requirements but the file extension must be csv.
 
 ## INSTALLATION OF LIBRARIES
 The used libraries that are part of the project are located in the requirements.txt file.
@@ -23,7 +23,7 @@ To run the election.py file, you need 2 mandatory arguments.
 
 python election.py <"url referring to the desired territory"> <"filename.csv">
 
-## SAMPLE PROGRAM
+## SAMPLE PROGRAM (EXAMPLE)
 Voting results for the Benešov district:
 
 1. Argument(URL): '''https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101'''
