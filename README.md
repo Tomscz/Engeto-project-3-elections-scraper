@@ -26,17 +26,19 @@ python election.py <"url referring to the desired territory"> <"filename.csv">
 ## SAMPLE PROGRAM (EXAMPLE)
 Voting results for the Benešov district:
 
+If you want to take result from Benešov district, in terminal (pycharm) you have to input link of this district and your own name of exported csv file, for example Benesov.csv. Or you can input any district you want and any name of exported file.
+
 1. Argument(URL): '''https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101'''
 
-2. Argument(filename): "result.csv"
+2. Argument(filename): "Benesov.csv"
 
 ### STARTING THE PROGRAM
-python election.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "result.csv"
+python election.py "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101" "Benesov.csv"
 
 ### DOWNLOADING
 Downloading data from: "https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2101"
 
-Saving data to: result.csv
+Saving data to: Benesov.csv
 
 Data was saved. Exiting program!
 
